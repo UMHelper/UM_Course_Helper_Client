@@ -1,1 +1,1 @@
-# UM_COurse_Helper_Client
+# UM_Course_Helper_Client
