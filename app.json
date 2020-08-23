@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/search/search",
+    "pages/course/course",
+    "pages/comment/comment",
+    "pages/submit/submit"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "澳大选咩课",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
