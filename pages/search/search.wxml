@@ -1,2 +1,58 @@
-<!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+
+    <view class="logo_contain">
+        <view class="logo"><image src="/img/logo.png" alt=""/></view>
+        <view class="text">
+        <view>搜索课程</view>
+        <view> Search</view>
+        </view>
+    </view>
+
+    <view class="search_contain">
+        <view class="search">
+            <input class="search-input" placeholder='Enter Course Code' type="text" placeholder-style="color:#000;"/>
+        </view>
+
+        <view class="submit">
+            <button>
+            <view >
+                Search
+            </view>
+                
+            </button>
+        </view>
+
+        <!-- <view class="option-box">
+            <view class="option">ACCT1000</view>
+            <view class="option">ACCT1000</view>
+        </view>                  -->
+    </view>
+
+
+    <view class="info_contain">
+    <view class="info">
+        <view>
+            <text decode="{{true}}">
+                v2.0.0&nbsp;
+            </text>
+              
+        </view>
+        <view>
+            <text decode="{{true}}">
+                |&nbsp;
+            </text>
+              
+        </view>
+        <view>
+            <text decode="{{true}}">
+                About
+            </text>
+              
+        </view>
+    </view>
+    </view>
+
+    <!-- <view class="language_contain">
+        <text class="language">ENG</text>
+        <text>or</text>
+        <text class="language">CHN</text>
+    </view>  -->
