@@ -1,204 +1,55 @@
+<wxs module="filters" src="../../utils/addmul.wxs"></wxs>
 <view class="course_info">
     <view class="code">
-        ACCT1000
+        {{course_info.New_code}}
     </view>
     
     <rich-text class="courseEng">
-        Economics with Chinese Characteristics
+        {{course_info.courseTitleEng}}
     </rich-text>
 
     <rich-text class="courseChi">
-        中国特色经济学
+        {{course_info.courseTitleChi}}
     </rich-text>
     <view class="credits">
-        FBA/SDS
+        {{course_info.Offering_Unit}}/{{course_info.Offering_Department}}
     </view>
     <view class="credits">
-        Credits: 3.0
+        Credits: {{course_info.Credits}}
     </view>
       
     <view class="language">
-        Language: Chinese
+        Language: {{course_info.Medium_of_Instruction}}
     </view>
 
 </view>
 
-<view class="profs">
+<view wx:for="{{prof_info}}" wx:for-index="idx" wx:for-item="prof" class="profs" data-index="{{idx}}" bindtap="comments">
     <view class="title">
         <rich-text class="prof">
-            Prof.Xi
+            {{[prof.name]}}
         </rich-text>
 
         <view class="result">
-            2.0/10.0
+            {{filters.toFix(prof.result)*2}}/10.0
         </view>
     </view>
 
     <view class="content">
         <view class="c1">
-            <view >给分：1.0/5.0</view>
-            <view class="grade">签到：1.0/5.0</view>
+            <view >给分：{{filters.toFix(prof.grade)}}/5.0</view>
+            <view class="grade">签到：{{filters.toFix(prof.attendance)}}/5.0</view>
         </view>
         
         <view class="c2">
-            <view >作业：1.0/5.0</view>
-            <view class="grade">辛苦：1.0/5.0</view>
+            <view >收获：{{filters.toFix(prof.reward)}}/5.0</view>
+            <view class="grade">辛苦：{{filters.toFix(prof.hard)}}/5.0</view>
         </view> 
     </view>
 
     <view class="num">
         <view>
-            64 Comments
-        </view>
-    </view>
-</view>
-
-<view class="profs">
-    <view class="title">
-        <rich-text class="prof">
-            Prof.Xi
-        </rich-text>
-
-        <view class="result">
-            2.0/10.0
-        </view>
-    </view>
-
-    <view class="content">
-        <view class="c1">
-            <view >给分：1.0/5.0</view>
-            <view class="grade">签到：1.0/5.0</view>
-        </view>
-        
-        <view class="c2">
-            <view >作业：1.0/5.0</view>
-            <view class="grade">辛苦：1.0/5.0</view>
-        </view> 
-    </view>
-
-    <view class="num">
-        <view>
-            64 Comments
-        </view>
-    </view>
-</view>
-
-<view class="profs">
-    <view class="title">
-        <rich-text class="prof">
-            Prof.Xi
-        </rich-text>
-
-        <view class="result">
-            2.0/10.0
-        </view>
-    </view>
-
-    <view class="content">
-        <view class="c1">
-            <view >给分：1.0/5.0</view>
-            <view class="grade">签到：1.0/5.0</view>
-        </view>
-        
-        <view class="c2">
-            <view >作业：1.0/5.0</view>
-            <view class="grade">辛苦：1.0/5.0</view>
-        </view> 
-    </view>
-
-    <view class="num">
-        <view>
-            64 Comments
-        </view>
-    </view>
-</view>
-
-<view class="profs">
-    <view class="title">
-        <rich-text class="prof">
-            Prof.Xi
-        </rich-text>
-
-        <view class="result">
-            2.0/10.0
-        </view>
-    </view>
-
-    <view class="content">
-        <view class="c1">
-            <view >给分：1.0/5.0</view>
-            <view class="grade">签到：1.0/5.0</view>
-        </view>
-        
-        <view class="c2">
-            <view >作业：1.0/5.0</view>
-            <view class="grade">辛苦：1.0/5.0</view>
-        </view> 
-    </view>
-
-    <view class="num">
-        <view>
-            64 Comments
-        </view>
-    </view>
-</view>
-
-<view class="profs">
-    <view class="title">
-        <rich-text class="prof">
-            Prof.Xi
-        </rich-text>
-
-        <view class="result">
-            2.0/10.0
-        </view>
-    </view>
-
-    <view class="content">
-        <view class="c1">
-            <view >给分：1.0/5.0</view>
-            <view class="grade">签到：1.0/5.0</view>
-        </view>
-        
-        <view class="c2">
-            <view >作业：1.0/5.0</view>
-            <view class="grade">辛苦：1.0/5.0</view>
-        </view> 
-    </view>
-
-    <view class="num">
-        <view>
-            64 Comments
-        </view>
-    </view>
-</view>
-
-<view class="profs">
-    <view class="title">
-        <rich-text class="prof">
-            Prof.Xi
-        </rich-text>
-
-        <view class="result">
-            2.0/10.0
-        </view>
-    </view>
-
-    <view class="content">
-        <view class="c1">
-            <view >给分：1.0/5.0</view>
-            <view class="grade">签到：1.0/5.0</view>
-        </view>
-        
-        <view class="c2">
-            <view >作业：1.0/5.0</view>
-            <view class="grade">辛苦：1.0/5.0</view>
-        </view> 
-    </view>
-
-    <view class="num">
-        <view>
-            64 Comments
+            {{prof.num}} Comments
         </view>
     </view>
 </view>

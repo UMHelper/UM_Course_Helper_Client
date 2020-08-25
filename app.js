@@ -1,6 +1,10 @@
 App({
   globalData:{
-
+      url:"http://127.0.0.1:8000",
+      course_info:{},
+      prof_list:[],
+      new_code:"",
+      prof_num:0,
   },
   data:{
 
@@ -16,14 +20,14 @@ App({
    * 当小程序启动，或从后台进入前台显示，会触发 onShow
    */
   onShow: function (options) {
-    
+      
   },
 
   /**
    * 当小程序从前台进入后台，会触发 onHide
    */
   onHide: function () {
-    
+
   },
 
   /**

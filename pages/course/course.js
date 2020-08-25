@@ -1,4 +1,5 @@
 // pages/course/course.js
+var app=getApp()
 Page({
 
   /**
@@ -7,7 +8,13 @@ Page({
   data: {
 
   },
-
+  comments:function(e){
+      var num=e.currentTarget.dataset['index'];
+      app.globalData.prof_num=num;
+      wx.navigateTo({
+        url: '../../pages/comment/comment?num='+JSON.stringify(that.data.queryList[index]),
+      })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -19,7 +26,10 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+      this.setData({
+        course_info:app.globalData.course_info,
+        prof_info:app.globalData.prof_info,
+      })
   },
 
   /**

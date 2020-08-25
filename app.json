@@ -1,11 +1,8 @@
 {
   "pages": [
+    "pages/search/search",
     "pages/comment/comment",
     "pages/course/course",
-    "pages/search/search",
-    
-    
-    
     "pages/submit/submit"
   ],
   "window": {

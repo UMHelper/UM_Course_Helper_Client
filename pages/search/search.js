@@ -1,4 +1,5 @@
 // pages/search/search.js
+var app=getApp()
 Page({
   /**
    * 页面的初始数据
@@ -6,7 +7,29 @@ Page({
   data: {
 
   },
+  input: function(e){
+    var key=e.detail.value.toUpperCase();
+    this.setData({
+      new_code:key,
+    })
+  },
 
+  search:function(){
+    app.globalData.new_code=this.data.new_code;
+    wx.request({
+      url: app.globalData.url+"/course_info?New_code="+this.data.new_code,
+      success(res){
+        app.globalData.course_info=res.data['course_info'];
+
+        app.globalData.prof_info=res.data['prof_info'];
+        console.log(app.globalData.prof_info)
+      }
+    })
+
+    wx.navigateTo({
+      url: '../../pages/course/course',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -39,6 +62,9 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+    course_info={};
+      prof_list=[];
+      new_code="";
 
   },
 

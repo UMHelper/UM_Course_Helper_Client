@@ -9,15 +9,14 @@
 
     <view class="search_contain">
         <view class="search">
-            <input class="search-input" placeholder='Enter Course Code' type="text" placeholder-style="color:#000;"/>
+            <input class="search-input" placeholder='Enter Course Code' type="text" placeholder-style="color:#000;" bindinput="input"/>
         </view>
 
         <view class="submit">
-            <button>
+            <button bindtap="search">
             <view >
                 Search
             </view>
-                
             </button>
         </view>
 
@@ -48,18 +47,18 @@
             </text>
               
         </view>
-        <view>
+        <!-- <view>
             <text decode="{{true}}">
                 |&nbsp;
-            </text>
+            </text> -->
               
-        </view>
-        <view>
+        <!-- </view> -->
+        <!-- <view>
             <text decode="{{true}}">
                 By Box
-            </text>
+            </text> -->
               
-        </view>
+        <!-- </view> -->
     </view>
     </view>
 

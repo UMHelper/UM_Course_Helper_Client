@@ -1,33 +1,34 @@
+<wxs module="filters" src="../../utils/addmul.wxs"></wxs>
 <view class="profs">
-    <view class="title">
+   <view class="title">
         <rich-text class="prof">
-            Prof.Xi
+            {{[prof.name]}}
         </rich-text>
 
         <view class="result">
-            2.0/10.0
+            {{filters.toFix(prof.result)*2}}/10.0
         </view>
     </view>
 
     <view class="content">
         <view class="c1">
-            <view >给分：1.0/5.0</view>
-            <view class="grade">签到：1.0/5.0</view>
+            <view >给分：{{filters.toFix(prof.grade)}}/5.0</view>
+            <view class="grade">签到：{{filters.toFix(prof.attendance)}}/5.0</view>
         </view>
         
         <view class="c2">
-            <view >作业：1.0/5.0</view>
-            <view class="grade">辛苦：1.0/5.0</view>
+            <view >收获：{{filters.toFix(prof.reward)}}/5.0</view>
+            <view class="grade">辛苦：{{filters.toFix(prof.hard)}}/5.0</view>
         </view> 
     </view>
 
     <view class="num">
         <view>
-            64 Comments
+            {{prof.num}} Comments
         </view>
     </view>
 </view>
-
+<view class="submit"><button>Make your comment</button></view>
 <view class="comments">
     <view class="comment">
         <rich-text>
