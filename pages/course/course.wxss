@@ -1,1 +1,72 @@
-/* pages/course/course.wxss */
+page{
+    background:#9eb3c2;
+    margin: 0;
+}
+.course_info, .profs{
+    font-size: 35rpx;
+    color: #707070;
+    width: 70%;
+    background: #ffffff ;
+    padding-top: 40rpx;
+    padding-bottom: 40rpx;
+    padding-left: 40rpx;
+    margin: auto;
+    margin-top:70rpx;
+    border-radius: 60rpx;
+    box-shadow: 0px 0px 40px  rgba(0,0,0,.46);
+    -webkit-box-shadow: 0px 0px 40px  rgba(0,0,0,.46);
+    line-height: 60rpx;
+}
+
+.course_info .code{
+    color: #000000;
+}
+
+.profs .title{
+    position: relative;
+}
+
+.profs .title view,.profs .title .prof{
+    position: absolute;
+    font-size: 40rpx;
+    color: #000000;
+}
+
+.profs .title .prof{
+    width: 50%;
+}
+
+.profs .title .result{
+    right: 60rpx;
+}
+
+.profs .content{
+    margin-top: 80rpx;
+}
+
+.profs .content .c1, .profs .content .c2{
+    position: relative;
+}
+
+.profs .content .c1 view,.profs .content .c2 view{
+    font-size: 30rpx;
+    display: inline;
+}
+
+.grade{
+    position: absolute;
+    right: 60rpx;
+}
+
+.profs .num{
+    position: relative;
+}
+
+.profs .num{
+    height: 50rpx;
+}
+.profs .num view{
+    position: absolute;
+    right: 80rpx;
+    font-size: 25rpx;
+}
