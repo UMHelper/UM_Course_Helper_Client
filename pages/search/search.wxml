@@ -44,7 +44,19 @@
         </view>
         <view>
             <text decode="{{true}}">
-                About
+                About&nbsp;
+            </text>
+              
+        </view>
+        <view>
+            <text decode="{{true}}">
+                |&nbsp;
+            </text>
+              
+        </view>
+        <view>
+            <text decode="{{true}}">
+                By Box
             </text>
               
         </view>
