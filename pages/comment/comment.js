@@ -9,6 +9,11 @@ Page({
 
   },
 
+  submit_comment:function() {
+    wx.navigateTo({
+      url: '../../pages/submit/submit',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

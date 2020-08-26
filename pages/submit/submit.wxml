@@ -4,12 +4,94 @@
 <view class="submit">
     <view class="grade">
       <view class="part">
+        <view class="name">签到</view>
+        <view class="num">{{filters.toFix(attendance)}}/5.0</view>
+      </view>
+      <view class="swiper">
+        <slider bindchange="attendanceChange" min="1" max="5" activeColor="#9eb3c2" block-size="20" block-color="#606A71" step="0.1" value="{{attendance}}"/>
+      </view>
+      <view class="left">每次</view>
+      <view class="right">从不</view>
+    </view>
+
+    <view class="grade">
+      <view class="part">
+        <view class="name">Presentation</view>
+        <view class="num">{{filters.toFix(pre)}}/5.0</view>
+      </view>
+      <view class="swiper">
+        <slider bindchange="preChange" min="1" max="5" activeColor="#9eb3c2" block-size="20" block-color="#606A71" step="0.1" value="{{pre}}"/>
+      </view>
+      <view class="left">从不</view>
+      <view class="right">多次/小组</view>
+    </view>
+
+
+    <view class="grade">
+      <view class="part">
         <view class="name">给分</view>
         <view class="num">{{filters.toFix(grade)}}/5.0</view>
       </view>
       <view class="swiper">
         <slider bindchange="gradeChange" min="1" max="5" activeColor="#9eb3c2" block-size="20" block-color="#606A71" step="0.1" value="{{grade}}"/>
       </view>
+      <view class="left">极低</view>
+      <view class="right">极高</view>
     </view>
 
+    <view class="grade">
+      <view class="part">
+        <view class="name">辛苦</view>
+        <view class="num">{{filters.toFix(hard)}}/5.0</view>
+      </view>
+      <view class="swiper">
+        <slider bindchange="hardChange" min="1" max="5" activeColor="#9eb3c2" block-size="20" block-color="#606A71" step="0.1" value="{{hard}}"/>
+      </view>
+      <view class="left">极辛苦</view>
+      <view class="right">极轻松</view>
+    </view>
+
+    <view class="grade">
+      <view class="part">
+        <view class="name">收获</view>
+        <view class="num">{{filters.toFix(reward)}}/5.0</view>
+      </view>
+      <view class="swiper">
+        <slider bindchange="rewardChange" min="1" max="5" activeColor="#9eb3c2" block-size="20" block-color="#606A71" step="0.1" value="{{reward}}"/>
+      </view>
+      <view class="left">极少</view>
+      <view class="right">极多</view>
+    </view>
+
+    <view class="grade">
+      <view class="part">
+        <view class="name">功课</view>
+        <view class="num">{{filters.toFix(assignment)}}/5.0</view>
+      </view>
+      <view class="swiper">
+        <slider bindchange="assignmentChange" min="1" max="5" activeColor="#9eb3c2" block-size="20" block-color="#606A71" step="0.1" value="{{assignment}}"/>
+      </view>
+      <view class="left">很多</view>
+      <view class="right">没有</view>
+    </view>
+
+    <view class="grade">
+      <view class="part">
+        <view class="name">推荐</view>
+        <view class="num">{{filters.toFix(recommend)}}/5.0</view>
+      </view>
+      <view class="swiper">
+        <slider bindchange="recommendChange" min="1" max="5" activeColor="#9eb3c2" block-size="20" block-color="#606A71" step="0.1" value="{{recommend}}"/>
+      </view>
+      <view class="left">Killer</view>
+      <view class="right">推荐</view>
+    </view>
+
+
+    <view class="comment">
+        <textarea placeholder="写出你的评价吧！（可选）" bindinput="comment_input" maxlength="-1" auto-height="{{true}}">
+        </textarea>
+    </view>
+
+    <view class="submit_btn"><button bindtap="submit_comment">Submit</button></view>
 </view>

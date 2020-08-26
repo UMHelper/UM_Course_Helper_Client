@@ -32,7 +32,7 @@
 
 
 
-<view class="submit"><button>Make your comment</button></view>
+<view class="submit"><button bindtap="submit_comment">Make your comment</button></view>
 
 
 
@@ -46,7 +46,7 @@
     </view>
 </view>
 
- <view class="info_contain">
+ <!-- <view class="info_contain">
     <view class="info">
         <view>
             <text decode="{{true}}">
@@ -65,7 +65,7 @@
                 About&nbsp;
             </text>
               
-        </view>
+        </view> -->
         <!-- <view>
             <text decode="{{true}}">
                 |&nbsp;
@@ -78,5 +78,5 @@
             </text> -->
               
         <!-- </view> -->
-    </view>
-    </view>
+    <!-- </view>
+    </view> -->

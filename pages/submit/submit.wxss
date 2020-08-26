@@ -37,10 +37,12 @@ page{
   border-radius: 60rpx;
   box-shadow: 0px 0px 40px  rgba(0,0,0,.46);
   -webkit-box-shadow: 0px 0px 40px  rgba(0,0,0,.46);
+  margin-bottom: 100rpx;
 }
 
 .submit .grade{
-  height: 100rpx;
+  position: relative;
+  height: 150rpx;
   padding-top: 30rpx;
   padding-bottom: 30rpx;
 }
@@ -71,3 +73,56 @@ page{
   width: 90%;
 }
 
+.submit .grade .left,.submit .grade .right{
+  position: absolute;
+  top: 150rpx;
+}
+
+.submit .grade .left{
+  left: 60rpx;
+}
+
+.submit .grade .right{
+  right: 60rpx;
+}
+.comment{
+  background-color:rgba(241,241,241,.98);
+  border-radius: 40rpx;
+  padding-top: 30rpx;
+  margin: auto;
+  width: 90%;
+  margin-top: 30rpx;
+  min-height: 300rpx;
+}
+textarea{
+  font-size: 40rpx;
+  border:0;
+  margin: auto;
+  width: 80%;
+  background-color:rgba(241,241,241,.98);
+  min-height: 300rpx;
+}
+.submit_btn{
+  font-size: 35rpx;
+  color: #ffffff;
+  width: 75%;
+  background: #000000 ;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+  margin: auto;
+  margin-top:40rpx;
+  border-radius: 60rpx;
+  /* box-shadow: 0px 0px 40px  rgba(0,0,0,.46);
+  -webkit-box-shadow: 0px 0px 40px  rgba(0,0,0,.46); */
+  line-height: 60rpx;
+}
+
+.submit_btn button{
+  margin: 0;
+  padding: 0;
+  font-size: 30rpx;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
