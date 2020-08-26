@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/submit/submit",
     "pages/search/search",
     "pages/comment/comment",
-    "pages/course/course",
-    "pages/submit/submit"
+    "pages/course/course"
   ],
   "window": {
     "backgroundTextStyle": "light",

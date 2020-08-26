@@ -1,1 +1,73 @@
-/* pages/submit/submit.wxss */
+page{
+  background:#9eb3c2;
+  margin: 0;
+}
+.contain{
+    margin-top:40rpx;
+}
+
+.contain .title{
+  text-align: center;
+  width: 50%;
+  /* height: 80rpx; */
+  font-size: 35rpx;
+  color: #ffffff;
+  background: #606A71 ;
+  margin: auto;
+  border-radius: 60rpx;
+  line-height: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+
+  margin-bottom: 40rpx;
+}
+
+.contain .title{
+  line-height: 40rpx;
+}
+
+
+.submit{
+  padding: 30rpx;
+  margin: auto;
+  width: 80%;
+  background: #ffffff;
+  border-radius: 60rpx;
+  box-shadow: 0px 0px 40px  rgba(0,0,0,.46);
+  -webkit-box-shadow: 0px 0px 40px  rgba(0,0,0,.46);
+}
+
+.submit .grade{
+  height: 100rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+.submit .grade .part{
+  margin-top: 80rpx;
+  margin-bottom: 32rpx;
+  position: relative;
+}
+
+.submit .grade .part view{
+  top: -70rpx;
+  position: absolute;
+}
+
+.submit .grade .part .name{
+  font-size: 40rpx;
+  left: 40rpx;
+}
+.submit .grade .part .num{
+  right: 40rpx;
+  font-size: 40rpx;
+}
+
+.submit .grade .swiper{
+  margin: auto;
+  /* margin-top: 50rpx; */
+  /* margin-bottom: 40rpx; */
+  width: 90%;
+}
+

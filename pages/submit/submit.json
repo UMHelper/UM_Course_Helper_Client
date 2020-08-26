@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "navigationBarBackgroundColor" : "#9eb3c2",
+  "navigationBarTitleText": "提交评论",
+  "navigationBarTextStyle": "white"
 }
