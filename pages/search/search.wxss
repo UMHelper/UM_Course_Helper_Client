@@ -100,7 +100,9 @@ page{
     height: 90rpx;
 }
 
-
+.info_contain{
+    margin-bottom: 100rpx;
+}
 .info_contain .info{
     color: #fff;
     display: flex;

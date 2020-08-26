@@ -11,7 +11,7 @@
     <rich-text class="courseChi">
         {{course_info.courseTitleChi}}
     </rich-text>
-    <view class="credits">
+    <!-- <view class="credits">
         {{course_info.Offering_Unit}}/{{course_info.Offering_Department}}
     </view>
     <view class="credits">
@@ -20,22 +20,23 @@
       
     <view class="language">
         Language: {{course_info.Medium_of_Instruction}}
-    </view>
+    </view> -->
 
 </view>
 
-<view wx:for="{{prof_info}}" wx:for-index="idx" wx:for-item="prof" class="profs" data-index="{{idx}}" bindtap="comments">
+<view wx:for="{{prof_info}}" wx:for-index="idx" wx:for-item="prof" class="profs" data-index="{{idx}}" wx:key="idx" bindtap="comments">
     <view class="title">
+        <view>
         <rich-text class="prof">
-            {{[prof.name]}}
+            {{prof.name}}
         </rich-text>
-
-        <view class="result">
-            {{filters.toFix(prof.result)*2}}/10.0
         </view>
     </view>
+    <view class="result">
+            {{filters.toFix(prof.result)*2}}/10.0
+    </view>
 
-    <view class="content">
+    <!-- <view class="content">
         <view class="c1">
             <view >给分：{{filters.toFix(prof.grade)}}/5.0</view>
             <view class="grade">签到：{{filters.toFix(prof.attendance)}}/5.0</view>
@@ -45,7 +46,7 @@
             <view >收获：{{filters.toFix(prof.reward)}}/5.0</view>
             <view class="grade">辛苦：{{filters.toFix(prof.hard)}}/5.0</view>
         </view> 
-    </view>
+    </view> -->
 
     <view class="num">
         <view>
@@ -53,3 +54,38 @@
         </view>
     </view>
 </view>
+
+ <view class="info_contain">
+    <view class="info">
+        <view>
+            <text decode="{{true}}">
+                v2.0.0&nbsp;
+            </text>
+              
+        </view>
+        <view>
+            <text decode="{{true}}">
+                |&nbsp;
+            </text>
+              
+        </view>
+        <view>
+            <text decode="{{true}}">
+                About&nbsp;
+            </text>
+              
+        </view>
+        <!-- <view>
+            <text decode="{{true}}">
+                |&nbsp;
+            </text> -->
+              
+        <!-- </view> -->
+        <!-- <view>
+            <text decode="{{true}}">
+                By Box
+            </text> -->
+              
+        <!-- </view> -->
+    </view>
+    </view>

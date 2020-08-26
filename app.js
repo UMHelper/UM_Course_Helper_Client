@@ -5,6 +5,7 @@ App({
       prof_list:[],
       new_code:"",
       prof_num:0,
+      comments:[],
   },
   data:{
 

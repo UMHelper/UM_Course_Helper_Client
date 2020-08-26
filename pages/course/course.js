@@ -8,12 +8,21 @@ Page({
   data: {
 
   },
-  comments:function(e){
-      var num=e.currentTarget.dataset['index'];
-      app.globalData.prof_num=num;
-      wx.navigateTo({
-        url: '../../pages/comment/comment?num='+JSON.stringify(that.data.queryList[index]),
-      })
+
+  comments:function (e) {
+    let prof_num = e.currentTarget.dataset['index'];
+    app.globalData.prof_num=prof_num;
+
+    wx.request({
+      url: app.globalData.url+"/comment_info/?New_code="+app.globalData.course_info["New_code"]+"&prof_name="+app.globalData.prof_info[app.globalData.prof_num]["name"],
+      success:function(res) {
+          var comment=res.data['comments'];
+          app.globalData.comments=comment;
+      }
+    })
+    wx.navigateTo({
+      url: '../../pages/comment/comment',
+    })
   },
   /**
    * 生命周期函数--监听页面加载

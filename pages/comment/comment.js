@@ -1,4 +1,5 @@
 // pages/comment/comment.js
+var app=getApp();
 Page({
 
   /**
@@ -24,15 +25,17 @@ Page({
       prof_info:app.globalData.prof_info,
       num:app.globalData.prof_num,
       prof:app.globalData.prof_info[app.globalData.prof_num],
-    })
-    console.log(app.globalData.prof_num)
+      comments:app.globalData.comments,
+    })  
+    
+    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**

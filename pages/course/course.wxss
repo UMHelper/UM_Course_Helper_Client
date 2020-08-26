@@ -13,8 +13,8 @@ page{
     margin: auto;
     margin-top:70rpx;
     border-radius: 60rpx;
-    box-shadow: 0px 0px 40px  rgba(0,0,0,.46);
-    -webkit-box-shadow: 0px 0px 40px  rgba(0,0,0,.46);
+    box-shadow: 0px 0px 40px  rgba(0,0,0,.3);
+    -webkit-box-shadow: 0px 0px 40px  rgba(0,0,0,.3);
     line-height: 60rpx;
 }
 
@@ -22,27 +22,36 @@ page{
     color: #000000;
 }
 
-.profs .title{
+/* .profs .title{
     position: relative;
-}
+    height: auto;
+} */
 
-.profs .title view,.profs .title .prof{
-    position: absolute;
-    font-size: 40rpx;
-    color: #000000;
-}
-
-.profs .title .prof{
+.profs .title view{
     width: 50%;
 }
 
-.profs .title .result{
+.profs .title view .prof{
+    /* position: absolute; */
+    font-size: 40rpx;
+    color: #000000;
+    width: 50%;
+}
+.profs{
+    position: relative;
+    margin-top:40rpx;
+}
+.profs .result{
+    position: absolute;
+    font-size: 40rpx;
+    color: #000000;
     right: 60rpx;
+    top: 40rpx;
 }
 
-.profs .content{
-    margin-top: 80rpx;
-}
+/* .profs .content{
+    /* margin-top: 80rpx; */
+/* } */ 
 
 .profs .content .c1, .profs .content .c2{
     position: relative;
@@ -59,14 +68,28 @@ page{
 }
 
 .profs .num{
-    position: relative;
+    position: absolute;
+    top: 80rpx;
+    right: 65rpx;
 }
 
 .profs .num{
     height: 50rpx;
 }
 .profs .num view{
-    position: absolute;
-    right: 80rpx;
     font-size: 25rpx;
+}
+
+
+.info_contain{
+    margin-bottom: 100rpx;
+}
+.info_contain .info{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: 100rpx;
+}
+.info_contain view{
+    display: inline;
 }

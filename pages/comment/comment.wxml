@@ -1,13 +1,14 @@
 <wxs module="filters" src="../../utils/addmul.wxs"></wxs>
 <view class="profs">
-   <view class="title">
+       <view class="title">
+        <view>
         <rich-text class="prof">
-            {{[prof.name]}}
+            {{prof.name}}
         </rich-text>
-
-        <view class="result">
-            {{filters.toFix(prof.result)*2}}/10.0
         </view>
+    </view>
+    <view class="result">
+            {{filters.toFix(prof.result)*2}}/10.0
     </view>
 
     <view class="content">
@@ -28,35 +29,54 @@
         </view>
     </view>
 </view>
+
+
+
 <view class="submit"><button>Make your comment</button></view>
+
+
+
+
 <view class="comments">
-    <view class="comment">
+    <view class="comment" wx:for="{{comments}}" wx:for-index="idx" wx:for-item="comment" data-index="{{idx}}" wx:key="idx">
+        <view class="num">#{{idx+1}}</view>
         <rich-text>
-            不错不错，太棒了。
-        </rich-text>
-    </view>
-
-    <view class="comment">
-        <rich-text>
-            不错不错，太棒了。斯巴拉西！
-        </rich-text>
-    </view>
-
-    <view class="comment">
-        <rich-text>
-            不错不错，太棒了。斯巴拉西！不错不错，太棒了。斯巴拉西！不错不错，太棒了。斯巴拉西！不错不错，太棒了。斯巴拉西！不错不错，太棒了。斯巴拉西！
-        </rich-text>
-    </view>
-
-    <view class="comment">
-        <rich-text>
-            不错不错，太棒了。斯巴拉西！不错不错，太棒了。斯巴拉西！不错不错，太棒了。斯巴拉西！不错不错，太棒了。斯巴拉西！
-        </rich-text>
-    </view>
-
-    <view class="comment">
-        <rich-text>
-            不错不错，太棒了。斯巴拉西！不错不错，太棒了。斯巴拉西！不错不错，太棒了。斯巴拉西！不错不错，太棒了。斯巴拉西！
+            {{comment.content}}
         </rich-text>
     </view>
 </view>
+
+ <view class="info_contain">
+    <view class="info">
+        <view>
+            <text decode="{{true}}">
+                v2.0.0&nbsp;
+            </text>
+              
+        </view>
+        <view>
+            <text decode="{{true}}">
+                |&nbsp;
+            </text>
+              
+        </view>
+        <view>
+            <text decode="{{true}}">
+                About&nbsp;
+            </text>
+              
+        </view>
+        <!-- <view>
+            <text decode="{{true}}">
+                |&nbsp;
+            </text> -->
+              
+        <!-- </view> -->
+        <!-- <view>
+            <text decode="{{true}}">
+                By Box
+            </text> -->
+              
+        <!-- </view> -->
+    </view>
+    </view>
