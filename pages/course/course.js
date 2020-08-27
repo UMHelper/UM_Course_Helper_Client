@@ -18,11 +18,12 @@ Page({
       success:function(res) {
           var comment=res.data['comments'];
           app.globalData.comments=comment;
+          wx.navigateTo({
+            url: '../../pages/comment/comment',
+          })
       }
     })
-    wx.navigateTo({
-      url: '../../pages/comment/comment',
-    })
+    
   },
   /**
    * 生命周期函数--监听页面加载
