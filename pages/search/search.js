@@ -15,20 +15,36 @@ Page({
   },
 
   search:function(){
+    // app.globalData.course_info={},
+    app.globalData.prof_list=[],
+    app.globalData.new_code="",
+    app.globalData.prof_num=0,
+    app.globalData.comments=[]
     app.globalData.new_code=this.data.new_code;
     wx.request({
       url: app.globalData.url+"/course_info?New_code="+this.data.new_code,
       success(res){
-        app.globalData.course_info=res.data['course_info'];
-
-        app.globalData.prof_info=res.data['prof_info'];
+        app.globalData.course_info=res.data["course_info"];
+        app.globalData.prof_info=res.data["prof_info"];
+        console.log(app.globalData.prof_info)
         console.log(app.globalData.prof_info)
       }
+      
     })
-
-    wx.navigateTo({
-      url: '../../pages/course/course',
+    wx.request({
+      url: app.globalData.url+"/course_info?New_code="+this.data.new_code,
+      success(res){
+        app.globalData.course_info=res.data["course_info"];
+        app.globalData.prof_info=res.data["prof_info"];
+        console.log(app.globalData.prof_info)
+        wx.navigateTo({
+          url: '../../pages/course/course',
+        })
+        console.log(app.globalData.prof_info)
+      }
+      
     })
+    
   },
   /**
    * 生命周期函数--监听页面加载
@@ -41,7 +57,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
