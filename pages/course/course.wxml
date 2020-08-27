@@ -55,7 +55,7 @@
     </view>
 </view>
 
- <!-- <view class="info_contain">
+ <view class="info_contain">
     <view class="info">
         <view>
             <text decode="{{true}}">
@@ -74,18 +74,18 @@
                 About&nbsp;
             </text>
               
-        </view> -->
-        <!-- <view>
+        </view>
+    <view>
             <text decode="{{true}}">
                 |&nbsp;
-            </text> -->
+            </text> 
               
-        <!-- </view> -->
-        <!-- <view>
+        </view>
+        <view>
             <text decode="{{true}}">
                 By Box
-            </text> -->
+            </text> 
               
-        <!-- </view> -->
-    <!-- </view> -->
-    <!-- </view> -->
+         </view> 
+     </view> 
+ </view>
