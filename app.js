@@ -1,6 +1,6 @@
 App({
   globalData:{
-      url:"http://127.0.0.1:8000",
+      url:"http://mpserver.umeh.top",
       course_info:{},
       prof_list:[],
       new_code:"",
@@ -14,7 +14,7 @@ App({
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
-    
+
   },
 
   /**
