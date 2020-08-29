@@ -1,5 +1,5 @@
 <wxs module="filters" src="../../utils/addmul.wxs"></wxs>
-<view class="contain"><view class="title"><text>ACCT1000 : SAM IENG</text></view></view>
+<view class="contain"><view class="title"><text>{{New_code}}:{{prof_name}}</text></view></view>
 
 <view class="submit">
     <view class="grade">

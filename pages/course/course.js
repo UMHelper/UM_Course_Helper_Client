@@ -41,7 +41,7 @@ Page({
         prof_info:app.globalData.prof_info,
       })
       wx.setNavigationBarTitle({
-        title: "课程详情 | "+ this.data.course_info["New_code"]
+        title: "課程詳情 | "+ this.data.course_info["New_code"]
       });
   },
 

@@ -95,15 +95,18 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
-  },
+    this.setData({
+      New_code:app.globalData.new_code,
+      prof_name:app.globalData.prof_info[app.globalData.prof_num]["name"]
+    }
+    ),
 
   /**
    * 生命周期函数--监听页面隐藏

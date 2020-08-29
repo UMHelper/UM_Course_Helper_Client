@@ -46,6 +46,31 @@
     </view>
 </view>
 
+
+ <view class="info_contain">
+    <view class="info">
+        <view>
+            <text decode="{{true}}">
+                v2.0.0&nbsp;
+            </text>
+              
+        </view>
+        <view>
+            <text decode="{{true}}">
+                |&nbsp;
+            </text>
+              
+        </view> 
+              
+
+        <view>
+            <text decode="{{true}}">
+                Maintained by Box
+            </text> 
+              
+         </view> 
+     </view> 
+ </view>
  <!-- <view class="info_contain">
     <view class="info">
         <view>

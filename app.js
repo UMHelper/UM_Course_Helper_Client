@@ -1,6 +1,8 @@
 App({
   globalData:{
-      url:"http://mpserver.umeh.top",
+      // url:"http://60.205.223.2:888",
+      // url:"http://127.0.0.1:8000",
+      url:"https://mpserver.umeh.top",
       course_info:{},
       prof_list:[],
       new_code:"",

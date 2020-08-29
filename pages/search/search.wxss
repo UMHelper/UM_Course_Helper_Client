@@ -103,11 +103,19 @@ page{
 .info_contain{
     margin-bottom: 100rpx;
 }
-.info_contain .info{
+.info_contain .info1{
+    font-size: 30rpx;
     color: #fff;
     display: flex;
     justify-content: center;
     margin-top: 100rpx;
+}
+.info_contain .info2{
+    font-size: 25rpx;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    /* margin-: 100rpx; */
 }
 .info_contain view{
     display: inline;

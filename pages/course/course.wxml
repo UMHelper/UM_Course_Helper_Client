@@ -68,22 +68,12 @@
                 |&nbsp;
             </text>
               
-        </view>
+        </view> 
+              
+
         <view>
             <text decode="{{true}}">
-                About&nbsp;
-            </text>
-              
-        </view>
-    <view>
-            <text decode="{{true}}">
-                |&nbsp;
-            </text> 
-              
-        </view>
-        <view>
-            <text decode="{{true}}">
-                By Box
+                Maintained by Box
             </text> 
               
          </view> 
