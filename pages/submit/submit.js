@@ -105,9 +105,8 @@ Page({
     this.setData({
       New_code:app.globalData.new_code,
       prof_name:app.globalData.prof_info[app.globalData.prof_num]["name"]
-    }
-    ),
-
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */
