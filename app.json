@@ -3,7 +3,8 @@
     "pages/search/search",
     "pages/submit/submit",
     "pages/comment/comment",
-    "pages/course/course"
+    "pages/course/course",
+    "pages/prof_info/prof_info"
   ],
   "window": {
     "backgroundTextStyle": "light",

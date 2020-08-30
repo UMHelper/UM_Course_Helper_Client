@@ -1,5 +1,5 @@
 // pages/course/course.js
-// let interstitialAd = null
+let interstitialAd = null
 var app=getApp()
 Page({
 
@@ -30,14 +30,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // if (wx.createInterstitialAd) {
-    //   interstitialAd = wx.createInterstitialAd({
-    //     adUnitId: 'adunit-65602409d1a615ab'
-    //   })
-    //   interstitialAd.onLoad(() => {})
-    //   interstitialAd.onError((err) => {})
-    //   interstitialAd.onClose(() => {})
-    // }
+    if (wx.createInterstitialAd) {
+      interstitialAd = wx.createInterstitialAd({
+        adUnitId: 'adunit-65602409d1a615ab'
+      })
+      interstitialAd.onLoad(() => {})
+      interstitialAd.onError((err) => {})
+      interstitialAd.onClose(() => {})
+    }
   },
 
   /**
@@ -57,11 +57,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // if (interstitialAd) {
-    //   interstitialAd.show().catch((err) => {
-    //     console.error(err)
-    //   })
-    // }
+    if (interstitialAd) {
+      interstitialAd.show().catch((err) => {
+        console.error(err)
+      })
+    }
   },
 
   /**

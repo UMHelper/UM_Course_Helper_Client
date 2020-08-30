@@ -78,11 +78,20 @@ Page({
         'content-type':'application/x-www-form-urlencoded'
       },
       success:function(res) {
-        wx.navigateTo({
-          url: '../../pages/search/search',
-        })
+        
       }
     })
+    wx.request({
+      url: app.globalData.url+"/comment_info/?New_code="+app.globalData.course_info["New_code"]+"&prof_name="+app.globalData.prof_info[app.globalData.prof_num]["name"],
+      success:function(res) {
+          var comment=res.data['comments'];
+          app.globalData.comments=comment;
+          wx.navigateBack({
+            url: '',
+          })
+      }
+    })
+    
   },
   /**
    * 生命周期函数--监听页面加载
@@ -118,7 +127,9 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    wx.reLaunch({
+      url: '../../pages/comment/comment',
+    })
   },
 
   /**

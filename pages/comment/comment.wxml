@@ -12,7 +12,24 @@
     </view>
 
     <view class="content">
-        <view class="c1">
+        <view>
+            <view class="title">给分: {{filters.toFix(prof.grade)}}/5.0</view>
+            <progress percent="{{prof.grade*20}}" color="#000" active stroke-width="3" />
+        </view>
+        <view>
+            <view class="title">签到：{{filters.toFix(prof.attendance)}}/5.0</view>
+            <progress percent="{{prof.attendance*20}}" color="#000" active stroke-width="3" />
+        </view>
+        <view>
+            <view class="title">辛苦：{{filters.toFix(prof.hard)}}/5.0</view>
+            <progress percent="{{prof.hard*20}}" color="#000" active stroke-width="3" />
+        </view>
+        <view>
+            <view class="title">收获：{{filters.toFix(prof.reward)}}/5.0</view>
+            <progress percent="{{prof.reward*20}}" color="#000" active stroke-width="3" />
+        </view>
+
+        <!-- <view class="c1">
             <view >给分：{{filters.toFix(prof.grade)}}/5.0</view>
             <view class="grade">签到：{{filters.toFix(prof.attendance)}}/5.0</view>
         </view>
@@ -20,11 +37,13 @@
         <view class="c2">
             <view >收获：{{filters.toFix(prof.reward)}}/5.0</view>
             <view class="grade">辛苦：{{filters.toFix(prof.hard)}}/5.0</view>
-        </view> 
+        </view>  -->
     </view>
-
     <view class="num">
-        <view>
+        <!-- <view class="left" bindtap="prof">
+            搜索本教師
+        </view> -->
+        <view class="right">
             {{prof.num}} Comments
         </view>
     </view>
@@ -50,14 +69,13 @@
  <view class="info_contain">
     <view class="info">
         <view>
-            <text decode="{{true}}">
-                v2.0.0&nbsp;
+             <text decode="{{true}}">
             </text>
               
         </view>
         <view>
             <text decode="{{true}}">
-                |&nbsp;
+            
             </text>
               
         </view> 
@@ -65,7 +83,6 @@
 
         <view>
             <text decode="{{true}}">
-                Maintained by Box
             </text> 
               
          </view> 

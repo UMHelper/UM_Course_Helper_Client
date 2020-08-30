@@ -1,16 +1,17 @@
 <wxs module="filters" src="../../utils/addmul.wxs"></wxs>
-<view class="course_info">
+<view class="contain"><view class="title"><text>{{prof_info.name}}</text></view></view>
+<!-- <view class="course_info">
     <view class="code">
-        {{course_info.New_code}}
-    </view>
+        {{prof_info.name}}
+    </view> -->
     
-    <rich-text class="courseEng">
+    <!-- <rich-text class="courseEng">
         {{course_info.courseTitleEng}}
-    </rich-text>
+    </rich-text> -->
 
-    <rich-text class="courseChi">
+    <!-- <rich-text class="courseChi">
         {{course_info.courseTitleChi}}
-    </rich-text>
+    </rich-text> -->
     <!-- <view class="credits">
         {{course_info.Offering_Unit}}/{{course_info.Offering_Department}}
     </view>
@@ -22,35 +23,35 @@
         Language: {{course_info.Medium_of_Instruction}}
     </view> -->
 
-</view>
+<!-- </view> -->
 
-<view wx:for="{{prof_info}}" wx:for-index="idx" wx:for-item="prof" class="profs" data-index="{{idx}}" wx:key="idx" bindtap="comments">
+<view wx:for="{{course_list}}" wx:for-index="idx" wx:for-item="course" class="profs" data-index="{{idx}}" wx:key="idx" bindtap="comments">
     <view class="title">
         <view>
         <rich-text class="prof">
-            {{prof.name}}
+            {{course.course_info.courseTitleEng}}
         </rich-text>
         </view>
     </view>
     <view class="result">
-            {{filters.toFix(prof.result)*2}}/10.0
+            {{filters.toFix(course.prof_info.result)*2}}/10.0
     </view>
 
-    <!-- <view class="content">
+ <view class="content">
         <view class="c1">
-            <view >给分：{{filters.toFix(prof.grade)}}/5.0</view>
-            <view class="grade">签到：{{filters.toFix(prof.attendance)}}/5.0</view>
+            <view >给分：{{filters.toFix(course.prof_info.grade)}}/5.0</view>
+            <view class="grade">签到：{{filters.toFix(course.prof_info.attendance)}}/5.0</view>
         </view>
         
         <view class="c2">
-            <view >收获：{{filters.toFix(prof.reward)}}/5.0</view>
-            <view class="grade">辛苦：{{filters.toFix(prof.hard)}}/5.0</view>
+            <view >收获：{{filters.toFix(course.prof_info.reward)}}/5.0</view>
+            <view class="grade">辛苦：{{filters.toFix(course.prof_info.hard)}}/5.0</view>
         </view> 
-    </view> -->
+    </view>
 
     <view class="num">
         <view>
-            {{prof.num}} Comments
+            {{course.prof_info.num}} Comments
         </view>
     </view>
 </view>
@@ -59,13 +60,13 @@
     <view class="info">
         <view>
             <text decode="{{true}}">
-
+        
             </text>
               
         </view>
         <view>
             <text decode="{{true}}">
-
+    
             </text>
               
         </view> 
@@ -73,7 +74,7 @@
 
         <view>
             <text decode="{{true}}">
-
+     
             </text> 
               
          </view> 

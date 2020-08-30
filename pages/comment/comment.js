@@ -8,6 +8,43 @@ Page({
   data: {
 
   },
+  prof:function(){
+    app.globalData.course_info={},
+    app.globalData.prof_list=[],
+    app.globalData.new_code="",
+    app.globalData.prof_num=0,
+    app.globalData.comments=[],
+    app.globalData.prof_info={},
+    app.globalData. course_list=[],
+    wx.request({
+      url: app.globalData.url+"/prof_info?name="+this.data.prof["name"],
+      success(res){
+        app.globalData.prof_info=res.data["prof_info"];
+        app.globalData.course_list=res.data["course"];
+        wx.navigateTo({
+          url: '../../pages/prof_info/prof_info',
+        })
+      },
+      fail (res){
+        wx.request({
+          url: app.globalData.url+"/prof_info?name="+this.data.prof["name"],
+          success(res){
+            app.globalData.prof_info=res.data["prof_info"];
+            app.globalData.course_list=res.data["course"];
+            wx.navigateTo({
+              url: '../../pages/prof_info/prof_info',
+            })
+          },
+          fail (res){
+            this.setData({
+              st:"發生錯誤",
+            })
+          }
+        })
+        
+      },
+      })
+  },
 
   submit_comment:function() {
     wx.navigateTo({
@@ -27,8 +64,8 @@ Page({
   onReady: function () {
     this.setData({
       course_info:app.globalData.course_info,
-      prof_info:app.globalData.prof_info,
-      num:app.globalData.prof_num,
+      prof:app.globalData.prof_info,
+      // num:app.globalData.prof_num,
       prof:app.globalData.prof_info[app.globalData.prof_num],
       comments:app.globalData.comments,
     })  
@@ -42,7 +79,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    console.log("hello")
+    this.setData({
+      course_info:app.globalData.course_info,
+      prof:app.globalData.prof_info,
+      // num:app.globalData.prof_num,
+      prof:app.globalData.prof_info[app.globalData.prof_num],
+      comments:app.globalData.comments,
+    })  
+    console.log("hello")
+    wx.setNavigationBarTitle({
+      title: this.data.course_info["New_code"]+" | "+this.data.prof["name"]
+    });
   },
 
   /**

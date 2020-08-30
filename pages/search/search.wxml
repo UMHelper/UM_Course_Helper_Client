@@ -8,18 +8,31 @@
     </view>
 
     <view class="search_contain">
-        <view class="search">
-            <input class="search-input" placeholder='Enter Course Code' type="text" placeholder-style="color:#000;" bindinput="input"/>
+        <view class="search1">
+            <input class="search-input" placeholder="輸入課程代碼" type="text" placeholder-style="color:#000;" bindinput="input_code" value="{{inputValue}}"/>
+        </view>
+        <view class="text">or</view>
+        <view class="search2">
+            <input class="search-input" placeholder="教師名稱" type="text" placeholder-style="color:#000;" bindinput="input_name" value="{{inputValue}}"/>
         </view>
 
         <view class="submit">
-            <button bindtap="search">
+            <button bindtap="search" disabled="{{code}}">
             <view >
-                Search
+              {{st}} 
             </view>
             </button>
         </view>
-
+    <view class="info">您可以在瀏覽器訪問 web.umeh.top 使用我們在Web端提供的服務(中國大陸地區加載較爲緩慢)</view>
+<!-- 
+    <view class="info2" >
+        <view>
+            <text decode="{{true}}">
+                你可以在瀏覽器上訪問 https://web.umeh.top 繼續使用我們的服務
+            </text>
+              
+        </view>
+    </view> -->
         <!-- <view class="option-box">
             <view class="option">ACCT1000</view>
             <view class="option">ACCT1000</view>
@@ -39,7 +52,7 @@
     <view class="info2">
         <view>
             <text decode="{{true}}">
-                如果你有興趣參與到本項目的維護中
+                如果你有興趣參與到本項目的維護，宣傳中
             </text>    
         </view>
     </view>
@@ -52,22 +65,24 @@
         </view>
 
     </view>
-    
-    
-
-        <!-- <view>
+        <view class="info2">
+        <view>
             <text decode="{{true}}">
-                |&nbsp;
-            </text> -->
+                或者在Github搜索組織：UMHelper 參與程序維護
+            </text>
               
-        <!-- </view> -->
-        <!-- <view>
-            <text decode="{{true}}">
-                By Box
-            </text> -->
-              
-        <!-- </view> -->
+        </view>
 
+    </view>
+         <view class="info2">
+        <view>
+            <text decode="{{true}}">
+            &nbsp;
+            </text>
+              
+        </view>
+
+    </view>
     <view class="info2">
         <view>
             <text decode="{{true}}">

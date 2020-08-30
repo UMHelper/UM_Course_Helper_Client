@@ -1,0 +1,122 @@
+page{
+    background:#9eb3c2;
+    margin: 0;
+}
+.contain{
+    margin-top:40rpx;
+}
+
+.contain .title{
+  text-align: center;
+  width: 50%;
+  /* height: 80rpx; */
+  font-size: 35rpx;
+  color: #ffffff;
+  background: #606A71 ;
+  margin: auto;
+  border-radius: 60rpx;
+  line-height: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+
+  margin-bottom: 40rpx;
+}
+
+.contain .title{
+  line-height: 40rpx;
+}
+
+.course_info, .profs{
+    font-size: 35rpx;
+    color: #707070;
+    width: 70%;
+    background: #ffffff ;
+    padding-top: 40rpx;
+    padding-bottom: 40rpx;
+    padding-left: 40rpx;
+    margin: auto;
+    margin-top:70rpx;
+    border-radius: 60rpx;
+    box-shadow: 0px 0px 40px  rgba(0,0,0,.3);
+    -webkit-box-shadow: 0px 0px 40px  rgba(0,0,0,.3);
+    line-height: 60rpx;
+}
+
+.course_info .code{
+    color: #000000;
+}
+
+/* .profs .title{
+    position: relative;
+    height: auto;
+} */
+
+.profs .title view{
+    width: 50%;
+}
+
+.profs .title view .prof{
+    /* position: absolute; */
+    line-height: 40rpx;
+    font-size: 30rpx;
+    color: #000000;
+    width: 50%;
+}
+.profs{
+    position: relative;
+    margin-top:40rpx;
+}
+.profs .result{
+    position: absolute;
+    font-size: 40rpx;
+    color: #000000;
+    right: 60rpx;
+    top: 40rpx;
+}
+
+/* .profs .content{
+    /* margin-top: 80rpx; */
+/* } */ 
+
+.profs .content .c1, .profs .content .c2{
+    position: relative;
+}
+
+.profs .content .c1 view,.profs .content .c2 view{
+    font-size: 30rpx;
+    display: inline;
+}
+
+.grade{
+    position: absolute;
+    right: 60rpx;
+}
+
+.profs .num{
+    position: absolute;
+    bottom: 15rpx;
+    right: 65rpx;
+}
+
+.profs .num{
+    height: 50rpx;
+}
+.profs .num view{
+    font-size: 25rpx;
+}
+
+
+.info_contain{
+    margin-bottom: 100rpx;
+}
+.info_contain .info{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: 100rpx;
+}
+.info_contain view{
+    display: inline;
+}

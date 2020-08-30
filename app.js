@@ -8,6 +8,8 @@ App({
       new_code:"",
       prof_num:0,
       comments:[],
+      prof_info:{},
+      course_list:[],
   },
   data:{
 
