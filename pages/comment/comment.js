@@ -69,6 +69,11 @@ Page({
       prof:app.globalData.prof_info[app.globalData.prof_num],
       comments:app.globalData.comments,
     })  
+    if (this.data.comments.length==0){
+      this.setData({
+        no_comment:true
+      })
+    }
     wx.setNavigationBarTitle({
       title: this.data.course_info["New_code"]+" | "+this.data.prof["name"]
     });

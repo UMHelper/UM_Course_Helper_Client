@@ -55,7 +55,13 @@
 
 
 
-
+<view class="comments" wx:if="{{no_comment}}">
+    <view class="comment">
+        <rich-text>
+            No Data 😥
+        </rich-text>
+    </view>
+</view>
 <view class="comments">
     <view class="comment" wx:for="{{comments}}" wx:for-index="idx" wx:for-item="comment" data-index="{{idx}}" wx:key="idx">
         <view class="num">#{{idx+1}}</view>

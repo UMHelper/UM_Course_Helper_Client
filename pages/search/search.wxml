@@ -8,7 +8,35 @@
     </view>
 
     <view class="search_contain">
-        <view class="search1">
+
+        <!-- <view class="select">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <label class="radio">
+                
+                  <radio value="course" checked="true" color="#9eb3c2"/>課程
+   
+              </label>
+                <label class="radio">
+                  <radio value="prof" color="#9eb3c2"/>教授
+              </label>
+            </radio-group>
+        </view> -->
+        <view class="search1" style="height: {{height}}">
+            <input class="search-input" placeholder="請輸入課程編號" type="text" placeholder-style="color:#000;" bindinput="input_code" value="{{inputValue}}" />
+            
+            <view class="result_contain" wx:if="{{type=='course'}}">
+                <view class="result" wx:for="{{course_list}}" wx:for-index="idx" wx:for-item="course" data-index="{{idx}}" wx:key="idx" bindtap="tap_course">
+                    {{course.New_code}}
+                </view>
+            </view>
+            <view class="result_contain" wx:elif="{{type=='prof'}}">
+                <view class="result" wx:for="{{prof_list}}" wx:for-index="idx" wx:for-item="prof" data-index="{{idx}}" wx:key="idx" bindtap="tap_prof">
+                    {{prof.name}}
+                </view>
+            </view>
+              
+        </view>
+        <!-- <view class="search1">
             <input class="search-input" placeholder="輸入課程代碼" type="text" placeholder-style="color:#000;" bindinput="input_code" value="{{inputValue}}"/>
         </view>
         <view class="text">or</view>
@@ -22,7 +50,7 @@
               {{st}} 
             </view>
             </button>
-        </view>
+        </view> -->
     <view class="info">您可以在瀏覽器訪問 web.umeh.top 使用我們在Web端提供的服務(中國大陸地區加載較爲緩慢)</view>
 <!-- 
     <view class="info2" >

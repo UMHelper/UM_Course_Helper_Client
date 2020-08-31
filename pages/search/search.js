@@ -10,12 +10,109 @@ Page({
       new_code:"",
       prof_name:"",
       code:false,
+      type:"course",
+      height:"90rpx", 
+      // 450rpx max
+      dispaly:"none"
   },
-  input_code: function(e){
-    var key=e.detail.value.toUpperCase();
+  tap_course:function(e){
+    let course_num = e.currentTarget.dataset['index'];
+    console.log(this.data.course_list[course_num]["New_code"])
+    wx.request({
+      url: app.globalData.url+"/course_info/?New_code="+this.data.course_list[course_num]["New_code"],
+      success(res){
+        app.globalData.new_code=res.data["course_info"]["New_code"];
+        app.globalData.course_info=res.data["course_info"];
+        app.globalData.prof_info=res.data["prof_info"];
+        wx.navigateTo({
+          url: '../../pages/course/course',
+        })
+      },
+      fail (res){
+        wx.request({
+          url: app.globalData.url+"/course_info/?New_code="+this.data.course_list[course_num]["New_code"],
+          success(res){
+            app.globalData.new_code=res.data["course_info"]["New_code"];
+            app.globalData.course_info=res.data["course_info"];
+            app.globalData.prof_info=res.data["prof_info"];
+            wx.navigateTo({
+              url: '../../pages/course/course',
+            })
+          },
+          fail (res){
+            this.setData({
+              st:"發生錯誤",
+            })
+          }
+          
+        })
+        
+      },
+      })
+  },
+  radioChange:function(e){
     this.setData({
-      new_code:key,
+      type:e.detail.value,
+      height:"90rpx"
     })
+  },
+  
+  input_code: function(e){
+    var that=this
+    var key=e.detail.value.toUpperCase();
+    var result=[]
+    if (this.data.type=="course"){
+      wx.request({
+        url: app.globalData.url+"/fuzzy_search?text="+key+"&type=course",
+        success(res){
+          result=res.data["course_info"]
+          that.setData({
+            course_list:res.data["course_info"]
+          })
+          // console.log(result.length)
+          if (that.data.course_list.length<=5){
+            console.log((that.data.course_list.length*60+90).toString())
+            that.setData({
+              height:(that.data.course_list.length*60+90).toString()+"rpx"
+            })
+          }
+          else{
+            that.setData({
+              height:"450rpx"
+            })
+         }
+        },
+      })
+      
+    }
+    else if(type=="prof"){
+      wx.request({
+        url: app.globalData.url+"/fuzzy_search?text="+key+"&type=prof",
+        success(res){
+          result=res.data["prof_info"]
+          that.setData({
+            prof_list:res.data["prof_info"]
+          })
+          // console.log(result.length)
+          if (that.data.prof_list.length<=5){
+            that.setData({
+              height:(that.data.prof_list.length*60+90).toString()+"rpx"
+            })
+          }
+          else{
+            that.setData({
+              height:"450rpx"
+            })
+         }
+        },
+      })
+
+    }
+    else{
+      that.setData({
+        height:"90rpx"
+      })
+    }
   },
 
   input_name: function(e){
@@ -146,6 +243,7 @@ Page({
       inputValue:"",
       new_code:"",
       prof_name:"",
+      height:"90rpx",
     })
     // if (interstitialAd) {
     //   interstitialAd.show().catch((err) => {

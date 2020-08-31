@@ -112,7 +112,7 @@ Page({
    */
   onShow: function () {
     this.setData({
-      New_code:app.globalData.new_code,
+      New_code:app.globalData.course_info["New_code"],
       prof_name:app.globalData.prof_info[app.globalData.prof_num]["name"]
     })
   },

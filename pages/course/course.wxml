@@ -23,7 +23,17 @@
     </view> -->
 
 </view>
-
+<view wx:if="{{no_data}}">
+<view class="profs" >
+    <view class="title">
+        <view>
+        <rich-text >
+            No data 😭
+        </rich-text>
+        </view>
+    </view>
+ </view>
+</view>
 <view wx:for="{{prof_info}}" wx:for-index="idx" wx:for-item="prof" class="profs" data-index="{{idx}}" wx:key="idx" bindtap="comments">
     <view class="title">
         <view>
