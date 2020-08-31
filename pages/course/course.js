@@ -9,7 +9,7 @@ Page({
   data: {
 
   },
-
+  
   comments:function (e) {
     let prof_num = e.currentTarget.dataset['index'];
     app.globalData.prof_num=prof_num;
@@ -68,7 +68,7 @@ Page({
       })
     }
   },
-
+ 
   /**
    * 生命周期函数--监听页面隐藏
    */

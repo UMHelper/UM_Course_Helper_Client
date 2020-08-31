@@ -15,6 +15,14 @@ Page({
       // 450rpx max
       dispaly:"none"
   },
+  onShareAppMessage: function(){
+    return{
+      title: '澳大選咩課',
+      desc: '澳大選課好幫手',
+      path: '/pages/search/search',
+      imageUrl: '/img/title.png'
+    }
+  },
   tap_course:function(e){
     let course_num = e.currentTarget.dataset['index'];
     console.log(this.data.course_list[course_num]["New_code"])
