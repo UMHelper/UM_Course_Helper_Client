@@ -1,4 +1,6 @@
 // pages/course/course.js
+var ga = require('../../utils/ga.js');
+var HitBuilders = ga.HitBuilders;
 let interstitialAd = null
 var app=getApp()
 Page({
@@ -62,6 +64,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var t = getApp().getTracker();
+    t.setScreenName('course_info - '+app.globalData.course_info["New_code"]);
+    t.send(new HitBuilders.ScreenViewBuilder().build());
     if (interstitialAd) {
       interstitialAd.show().catch((err) => {
         console.error(err)

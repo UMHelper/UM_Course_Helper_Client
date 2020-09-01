@@ -1,17 +1,34 @@
+var ga = require('./utils/ga.js');
+var GoogleAnalytics = ga.GoogleAnalytics;
+
 App({
-  globalData:{
-      // url:"http://60.205.223.2:888",
-      // url:"http://127.0.0.1:8000",
-      url:"https://mpserver.umeh.top",
-      course_info:{},
-      prof_list:[],
-      new_code:"",
-      prof_num:0,
-      comments:[],
-      prof_info:{},
-      course_list:[],
+  tracker: null,
+  getTracker: function () {
+    if (!this.tracker) {
+      // 初始化GoogleAnalytics Tracker
+      this.tracker = GoogleAnalytics.getInstance(this)
+        .setAppName('test!')
+        .setAppVersion('23333')
+        .newTracker('UA-176924130-1'); //用你的 Tracking ID 代替
+
+      //使用自己的合法域名做跟踪数据转发
+      this.tracker.setTrackerServer("把这玩意改了！！！！！");
+    }
+    return this.tracker;
   },
-  data:{
+  globalData: {
+    // url:"http://60.205.223.2:888",
+    // url:"http://127.0.0.1:8000",
+    url: "https://mpserver.umeh.top",
+    course_info: {},
+    prof_list: [],
+    new_code: "",
+    prof_num: 0,
+    comments: [],
+    prof_info: {},
+    course_list: [],
+  },
+  data: {
 
   },
   /**
@@ -25,7 +42,7 @@ App({
    * 当小程序启动，或从后台进入前台显示，会触发 onShow
    */
   onShow: function (options) {
-      
+
   },
 
   /**
@@ -39,6 +56,6 @@ App({
    * 当小程序发生脚本错误，或者 api 调用失败时，会触发 onError 并带上错误信息
    */
   onError: function (msg) {
-    
+
   }
 })

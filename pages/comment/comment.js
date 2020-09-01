@@ -1,4 +1,6 @@
 // pages/comment/comment.js
+var ga = require('../../utils/ga.js');
+var HitBuilders = ga.HitBuilders;
 var app=getApp();
 Page({
 
@@ -84,6 +86,9 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var t = getApp().getTracker();
+    t.setScreenName('comment - '+app.globalData.course_info["New_code"]);
+    t.send(new HitBuilders.ScreenViewBuilder().build());
     this.setData({
       course_info:app.globalData.course_info,
       prof:app.globalData.prof_info,
