@@ -12,7 +12,7 @@ App({
         .newTracker('UA-176924130-1'); //用你的 Tracking ID 代替
 
       //使用自己的合法域名做跟踪数据转发
-      this.tracker.setTrackerServer("把这玩意改了！！！！！");
+      this.tracker.setTrackerServer("https://ga.umeh.top");
     }
     return this.tracker;
   },
