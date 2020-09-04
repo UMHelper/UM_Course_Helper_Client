@@ -4,11 +4,12 @@ var GoogleAnalytics = ga.GoogleAnalytics;
 App({
   tracker: null,
   getTracker: function () {
+    var app_info = wx.getAccountInfoSync().accountInfo;
     if (!this.tracker) {
       // 初始化GoogleAnalytics Tracker
       this.tracker = GoogleAnalytics.getInstance(this)
-        .setAppName('test!')
-        .setAppVersion('23333')
+        .setAppName('UMEH_Wechat')
+        .setAppVersion(app_info.version + app_info.envVersion)
         .newTracker('UA-176924130-1'); //用你的 Tracking ID 代替
 
       //使用自己的合法域名做跟踪数据转发
