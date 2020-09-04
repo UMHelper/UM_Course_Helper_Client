@@ -4,7 +4,7 @@ var GoogleAnalytics = ga.GoogleAnalytics;
 App({
   tracker: null,
   getTracker: function () {
-    var app_info = wx.getAccountInfoSync().accountInfo;
+    var app_info = wx.getAccountInfoSync().miniProgram;
     if (!this.tracker) {
       // 初始化GoogleAnalytics Tracker
       this.tracker = GoogleAnalytics.getInstance(this)
