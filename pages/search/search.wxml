@@ -77,17 +77,11 @@
               
         </view>
     </view>
+
     <view class="info2">
         <view>
             <text decode="{{true}}">
                 如果你有興趣參與到本項目的維護，宣傳中
-            </text>    
-        </view>
-    </view>
-    <view class="info2">
-        <view>
-            <text decode="{{true}}">
-                請聯係Wechat: AbrahamBox。我們隨時歡迎
             </text>
               
         </view>
@@ -96,7 +90,7 @@
         <view class="info2">
         <view>
             <text decode="{{true}}">
-                或者在Github搜索組織：UMHelper 參與程序維護
+                請在Github搜索組織：UMHelper 提交申請
             </text>
               
         </view>
