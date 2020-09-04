@@ -9,7 +9,7 @@ App({
       // 初始化GoogleAnalytics Tracker
       this.tracker = GoogleAnalytics.getInstance(this)
         .setAppName('UMEH_Wechat')
-        .setAppVersion(app_info.version + app_info.envVersion)
+        .setAppVersion(app_info.version + " " + app_info.envVersion)
         .newTracker('UA-176924130-1'); //用你的 Tracking ID 代替
 
       //使用自己的合法域名做跟踪数据转发
