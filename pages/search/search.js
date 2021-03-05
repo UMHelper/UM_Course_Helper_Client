@@ -257,6 +257,7 @@ Page({
       new_code: "",
       prof_name: "",
       height: "90rpx",
+      version: wx.getAccountInfoSync().miniProgram.version,
     })
     // if (interstitialAd) {
     //   interstitialAd.show().catch((err) => {
