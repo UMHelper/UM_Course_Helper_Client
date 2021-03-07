@@ -3,6 +3,8 @@ var ga = require('../../utils/ga.js');
 var HitBuilders = ga.HitBuilders;
 let interstitialAd = null
 var app=getApp()
+var courseDescription=""
+var Intended_Learning_Outcomes=""
 Page({
 
   /**
@@ -49,6 +51,9 @@ Page({
       this.setData({
         course_info:app.globalData.course_info,
         prof_info:app.globalData.prof_info,
+        courseDescription:app.globalData.course_info["courseDescription"],
+        Intended_Learning_Outcomes:app.globalData.course_info["Intended_Learning_Outcomes"],
+        show_des:false,
       })
       if (this.data.prof_info.length==0){
         this.setData({
@@ -58,6 +63,10 @@ Page({
       wx.setNavigationBarTitle({
         title: "課程詳情 | "+ this.data.course_info["New_code"]
       });
+
+      
+      console.log("hello")
+      console.log("asdasdasd"+app.globalData.courseDescription)
   },
 
   /**
@@ -72,6 +81,14 @@ Page({
         console.error(err)
       })
     }
+   
+    
+  },
+  description:function(e){
+      this.setData({
+        show_des:true
+      })
+   
   },
  
   /**

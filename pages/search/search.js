@@ -150,9 +150,6 @@ Page({
         success(res) {
           app.globalData.course_info = res.data["course_info"];
           app.globalData.prof_info = res.data["prof_info"];
-          wx.navigateTo({
-            url: '../../pages/course/course',
-          })
         },
         fail(res) {
           wx.request({
@@ -160,9 +157,7 @@ Page({
             success(res) {
               app.globalData.course_info = res.data["course_info"];
               app.globalData.prof_info = res.data["prof_info"];
-              wx.navigateTo({
-                url: '../../pages/course/course',
-              })
+              
             },
             fail(res) {
               this.setData({
@@ -173,6 +168,25 @@ Page({
           })
 
         },
+      })
+      wx.request({
+        url: 'https://api.data.um.edu.mo/service/academic/course_catalog/v1.0.0/all',
+        data: {
+          course_code: this.data.new_code
+        },
+        header: {
+          'Accept': 'application/json',
+          'Authorization': 'Bearer bfa9b6c0-3f4f-3b1f-92c4-1bdd885a1ca2',
+        },
+        success (res) {
+          // courseDescription=res.data["_embedded"][0]["courseDescription"]
+          // Intended_Learning_Outcomes =res.data["_embedded"][0]["ilo"]
+          app.globalData.courseDescription=res.data["_embedded"][0]["courseDescription"],
+          app.globalData.Intended_Learning_Outcomes=res.data["_embedded"][0]["ilo"]
+          // wx.navigateTo({
+          //   url: '../../pages/course/course',
+          // })
+        }
       })
     }
     else if (this.data.prof_name != "") {
@@ -269,7 +283,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+   
     course_info = {};
     prof_list = [];
     new_code = "";

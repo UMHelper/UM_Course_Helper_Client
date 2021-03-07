@@ -190,3 +190,4 @@ page{
 .info_contain view{
     display: inline;
 }
+

@@ -28,6 +28,8 @@ App({
     comments: [],
     prof_info: {},
     course_list: [],
+    courseDescription:"",
+    Intended_Learning_Outcomes:"",
   },
   data: {
 

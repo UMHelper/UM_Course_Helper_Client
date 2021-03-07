@@ -21,6 +21,9 @@ page{
 .course_info .code{
     color: #000000;
 }
+.courseDescription{
+    color: #000000;
+}
 
 /* .profs .title{
     position: relative;
@@ -92,4 +95,21 @@ page{
 }
 .info_contain view{
     display: inline;
+}
+.description_show{
+    font-size: 35rpx;
+    max-height: 500rpx;
+    line-height: 40rpx;
+    margin-top: 30rpx;
+    overflow: auto;
+    margin-right: 40rpx;
+}
+.description_hide{
+    font-size: 35rpx;
+    max-height: 500rpx;
+    line-height: 40rpx;
+    margin-top: 30rpx;
+    overflow: auto;
+    margin-right: 40rpx;
+    display: none;
 }

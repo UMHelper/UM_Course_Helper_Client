@@ -1,16 +1,21 @@
 <wxs module="filters" src="../../utils/addmul.wxs"></wxs>
 <view class="course_info">
     <view class="code">
-        {{course_info.New_code}}
+        🔔{{course_info.New_code}}
     </view>
     
     <rich-text class="courseEng">
-        {{course_info.courseTitleEng}}
+        🏣{{course_info.courseTitleEng}}
     </rich-text>
 
     <rich-text class="courseChi">
-        {{course_info.courseTitleChi}}
+        📝{{course_info.courseTitleChi}}
     </rich-text>
+    <view class="courseDescription" bindtap="description">
+        <text>👉DESCRIPTION</text>
+        <view class="{{show_des?'description_show':'description_hide'}}"><rich-text class="description">{{courseDescription}}</rich-text></view>
+        
+    </view>
     <!-- <view class="credits">
         {{course_info.Offering_Unit}}/{{course_info.Offering_Department}}
     </view>
