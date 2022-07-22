@@ -1,10 +1,10 @@
 page{
-    background:#9eb3c2;
+    background:#30548B;
     margin: 0;
 }
 .comments .comment{
     font-size: 35rpx;
-    color: #707070;
+    color: #30548B;
     width: 70%;
     background: #ffffff ;
     padding-top: 10rpx;
@@ -18,8 +18,8 @@ page{
     line-height: 60rpx;
 }
 .profs{
-    font-size: 35rpx;
-    color: #707070;
+    font-size: 30rpx;
+    color: #30548B;
     width: 70%;
     background: #ffffff ;
     padding-top: 40rpx;
@@ -38,9 +38,10 @@ page{
 
 .profs .title view .prof{
     /* position: absolute; */
-    font-size: 40rpx;
+    font-size: 30rpx;
     color: #000000;
     width: 50%;
+    font-weight: bold;
 }
 .profs{
     position: relative;
@@ -48,7 +49,7 @@ page{
 }
 .profs .result{
     position: absolute;
-    font-size: 40rpx;
+    font-size: 25rpx;
     color: #000000;
     right: 60rpx;
     top: 40rpx;
@@ -128,14 +129,13 @@ page{
 
 
 .comment .num{
-
-    font-size: 30rpx;
-    color: #9eb3c2;
+    font-size: 25rpx;
+    color: #30548B;
 }
 .comment .time{
     position: absolute;
     font-size: 25rpx;
-    color: #9eb3c2;
+    color: #30548B;
     bottom: 1rpx;
     right: 50rpx;
 }
@@ -151,6 +151,7 @@ page{
 
 .comments .comment rich-text{
     color: #000000;
+    font-size: 30rpx;
 }
 
 .submit{

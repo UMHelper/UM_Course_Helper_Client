@@ -13,7 +13,7 @@ Page({
     prof_name: "",
     code: false,
     type: "course",
-    height: "90rpx",
+    height: "80rpx",
     // 450rpx max
     dispaly: "none"
   },
@@ -63,7 +63,7 @@ Page({
   radioChange: function (e) {
     this.setData({
       type: e.detail.value,
-      height: "90rpx"
+      height: "80rpx"
     })
   },
 
@@ -80,15 +80,15 @@ Page({
             course_list: res.data["course_info"]
           })
           // console.log(result.length)
-          if (that.data.course_list.length <= 5) {
-            console.log((that.data.course_list.length * 60 + 90).toString())
+          if (that.data.course_list.length <= 6) {
+            console.log((that.data.course_list.length * 60 + 80).toString())
             that.setData({
-              height: (that.data.course_list.length * 60 + 90).toString() + "rpx"
+              height: (that.data.course_list.length * 60 + 80).toString() + "rpx"
             })
           }
           else {
             that.setData({
-              height: "450rpx"
+              height: "500rpx"
             })
           }
         },
@@ -270,9 +270,23 @@ Page({
       inputValue: "",
       new_code: "",
       prof_name: "",
-      height: "90rpx",
+      height: "80rpx",
       version: wx.getAccountInfoSync().miniProgram.version,
     })
+    // wx.showModal({
+    //   title:'Whole @ UM 上綫了',
+    //   content:' Whole @ UM 澳大討論區已經上綫， 訪問 https://umbbs.xyz 快來與同學一起交流討論吧！！！',
+    //   cancelText:'No 🙈',
+    //   confirmText: 'Go! 🐵',
+    //   success(res){
+    //     if(res.confirm){
+    //       wx.navigateTo({
+    //         url: '../ad/ad',
+    //       })
+    //     }
+    //   }
+    // })
+
     // if (interstitialAd) {
     //   interstitialAd.show().catch((err) => {
     //     console.error(err)

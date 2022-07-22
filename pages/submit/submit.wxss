@@ -1,5 +1,5 @@
 page{
-  background:#9eb3c2;
+  background:#30548B;
   margin: 0;
 }
 .contain{
@@ -11,8 +11,8 @@ page{
   width: 50%;
   /* height: 80rpx; */
   font-size: 35rpx;
-  color: #ffffff;
-  background: #606A71 ;
+  color: #30548B;
+  background: #fff ;
   margin: auto;
   border-radius: 60rpx;
   line-height: 10rpx;
@@ -58,12 +58,12 @@ page{
 }
 
 .submit .grade .part .name{
-  font-size: 40rpx;
+  font-size: 30rpx;
   left: 40rpx;
 }
 .submit .grade .part .num{
   right: 40rpx;
-  font-size: 40rpx;
+  font-size: 30rpx;
 }
 
 .submit .grade .swiper{
@@ -95,7 +95,7 @@ page{
   min-height: 300rpx;
 }
 textarea{
-  font-size: 40rpx;
+  font-size: 30rpx;
   border:0;
   margin: auto;
   width: 80%;
@@ -105,10 +105,10 @@ textarea{
 .submit_btn{
   font-size: 35rpx;
   color: #ffffff;
-  width: 75%;
-  background: #000000 ;
-  padding-top: 40rpx;
-  padding-bottom: 40rpx;
+  width: 90%;
+  background: #30548B ;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
   margin: auto;
   margin-top:40rpx;
   border-radius: 60rpx;

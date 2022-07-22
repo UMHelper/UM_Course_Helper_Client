@@ -1,9 +1,9 @@
 page{
-    background:#9eb3c2;
+    background:#30548B;
     margin: 0;
 }
 .course_info, .profs{
-    font-size: 35rpx;
+    font-size: 30rpx;
     color: #707070;
     width: 70%;
     background: #ffffff ;
@@ -15,14 +15,17 @@ page{
     border-radius: 60rpx;
     box-shadow: 0px 0px 40px  rgba(0,0,0,.3);
     -webkit-box-shadow: 0px 0px 40px  rgba(0,0,0,.3);
-    line-height: 60rpx;
+    line-height: 50rpx;
 }
 
 .course_info .code{
     color: #000000;
+    font-size: 30rpx;
+    font-weight: bold;
 }
 .courseDescription{
     color: #000000;
+    
 }
 
 /* .profs .title{
@@ -36,9 +39,10 @@ page{
 
 .profs .title view .prof{
     /* position: absolute; */
-    font-size: 40rpx;
+    font-size: 30rpx;
     color: #000000;
     width: 50%;
+    font-weight: bold;
 }
 .profs{
     position: relative;
@@ -46,7 +50,7 @@ page{
 }
 .profs .result{
     position: absolute;
-    font-size: 40rpx;
+    font-size: 30rpx;
     color: #000000;
     right: 60rpx;
     top: 40rpx;

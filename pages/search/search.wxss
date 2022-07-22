@@ -2,7 +2,7 @@
 
 page{
     position: relative;
-    background:#9eb3c2;
+    background:#30548B;
     margin: 0;
 }
 .logo_contain{   
@@ -46,6 +46,8 @@ page{
     height: 600rpx;
     margin: auto;
     margin-top: 80rpx;
+    /* padding-bottom: 30rpx; */
+    /* padding-top: 30rpx; */
     border-radius: 60rpx;
     box-shadow: 0px 0px 64px  rgba(0,0,0,.46);
     -webkit-box-shadow: 0px 0px 64px  rgba(0,0,0,.46);
@@ -59,29 +61,34 @@ page{
     background-color: #fff;
     border-radius: 45rpx;
     left: 10%;
-    top: 15%;
-    border: 3rpx #5d93ab solid;
-    transition: all .5s ease-out;
+    top: 9%;
+    border: 3rpx #30548B solid;
+    /* transition: all .5s ease-out; */
 
 }
 .search_contain .search1 .result_contain{
-    max-height: 363rpx;
+    max-height: 424rpx;
     overflow: auto;
     border-radius: 0 0 45rpx 45rpx;
+    transition: all .5s ease-out;
 }
 .search_contain .search1 .result_contain view{
-    height: 60rpx;
-    border-top: 1rpx #8d93ab solid;
-    border-bottom: 1rpx #8d93ab solid;
-    background: #d6e0f0;
+    height: 55rpx;
+    color: #fff;
+    border-top: 1rpx #30548B solid;
+    border-bottom: 1rpx #30548B solid;
+    background: #30548B;
     line-height: 60rpx;
     padding-left: 40rpx;
+    padding-bottom: 5rpx;
+    transition: all .5s ease-out;
 }
 
 .search_contain .search1 input{
-    font-size: 40rpx;
+    font-size: 30rpx;
+    line-height: 0rpx;
     width: 80%;
-    height: 90rpx;
+    height: 80rpx;
     margin: auto;
     /* background-color: #5d93ab; */
     background-color: #fff;
@@ -158,10 +165,10 @@ page{
 .search_contain .info{
     color: #fff;
     position: absolute;
-    bottom: -60rpx;
+    top: -80rpx;
     left: 10%;
     width: 80%;
-    font-size: 20rpx;
+    font-size: 24rpx;
     text-align: center;
 }
 
@@ -183,21 +190,33 @@ page{
     color: #fff;
     /* display: flex; */
     /* justify-content: center; */
-    margin-top: 100rpx;
+    margin-top: 50rpx;
 }
 .info_contain .info2{
+    width: 100%;
+    /* height: 25rpx; */
+    line-height: 30rpx;
+    text-align: center;
+    /* margin-top: 10rpx; */
+    font-size: 30rpx;
+    color: #fff;
+    font-weight: bold;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* margin-: 100rpx; */
+}
+.info_contain .info3{
     width: 100%;
     /* height: 25rpx; */
     line-height: 15rpx;
     text-align: center;
     margin-top: 10rpx;
-    font-size: 25rpx;
+    font-size: 20rpx;
     color: #fff;
     /* display: flex; */
     /* justify-content: center; */
     /* margin-: 100rpx; */
 }
-
 .search_contain .info2{
     width: 80%;
     margin: auto;

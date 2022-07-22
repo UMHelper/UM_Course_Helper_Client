@@ -4,11 +4,12 @@
     "pages/submit/submit",
     "pages/comment/comment",
     "pages/course/course",
-    "pages/prof_info/prof_info"
+    "pages/prof_info/prof_info",
+    "pages/ad/ad"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#CFD9DF",
+    "navigationBarBackgroundColor": "#30548B",
     "navigationBarTitleText": "澳大選咩課",
     "navigationBarTextStyle": "black"
   },

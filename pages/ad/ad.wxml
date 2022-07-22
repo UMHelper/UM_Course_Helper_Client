@@ -1,0 +1,3 @@
+<!--pages/ad/ad.wxml-->
+<!-- <web-view src="{{webViewSrc}}"></web-view> -->
+<web-view src="https://mp.weixin.qq.com/s/6HfgXcL7ncy8TEd_uA9b1w"></web-view>

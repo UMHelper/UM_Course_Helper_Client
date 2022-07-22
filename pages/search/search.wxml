@@ -7,7 +7,7 @@
         </view>
     </view>
 
-    <view class="search_contain">
+    <view class="search_contain" >
 
         <!-- <view class="select">
             <radio-group class="radio-group" bindchange="radioChange">
@@ -21,7 +21,7 @@
               </label>
             </radio-group>
         </view> -->
-        <view class="search1" style="height: {{height}}">
+        <view class="search1" style="height: {{height}};">
             <input class="search-input" placeholder="請輸入課程編號" type="text" placeholder-style="color:#000;" bindinput="input_code" value="{{inputValue}}" />
             
             <view class="result_contain" wx:if="{{type=='course'}}">
@@ -51,7 +51,8 @@
             </view>
             </button>
         </view> -->
-    <view class="info">您可以在瀏覽器訪問 www.umeh.top 使用我們在Web/PWA提供的服務</view>
+    <!-- <view class="info">您可以在瀏覽器訪問 www.umeh.top 使用我們在Web/PWA提供的服務</view> -->
+    <!-- <view class="info">我們强烈建議您訪問 https://umeh.top 擺脫小屏的拘束</view> -->
 <!-- 
     <view class="info2" >
         <view>
@@ -72,7 +73,7 @@
     <view class="info1" >
         <view>
             <text decode="{{true}}">
-                v2.2.1
+                v2.2.4
             </text>
               
         </view>
@@ -81,16 +82,25 @@
     <view class="info2">
         <view>
             <text decode="{{true}}">
-                如果你有興趣參與到本項目的維護，宣傳中
+                目前 UMHelper 团队开发人员即将毕业，
+            </text>
+        </view>
+
+
+    </view>
+    <view class="info2">
+        <view>
+            <text decode="{{true}}">
+                如果你有兴趣接管本项目，
             </text>
               
         </view>
 
     </view>
-        <view class="info2">
+    <view class="info2">
         <view>
             <text decode="{{true}}">
-                請在Github搜索組織：UMHelper 提交申請
+                請在Github搜索組織：UMHelper 联系我们
             </text>
               
         </view>
@@ -105,24 +115,24 @@
         </view>
 
     </view>
-    <view class="info2">
+    <view class="info3">
         <view>
             <text decode="{{true}}">
-                Maintained by Box
+                Maintained by UMHelper
             </text>
               
         </view>
 
     </view>
-    <view class="info2">
+    <view class="info3">
 
         <view>
-            <text decode="{{true}}">
+            <!-- <text decode="{{true}}">
                 Previously Maintained by Owl Studio
-            </text>
+            </text> -->
             <text decode="{{true}}"> </text>
             <text decode="{{true}}">
-               Last updated on 2021-03-07
+               Last updated on 2022-7-22
             </text>
                
         </view>
